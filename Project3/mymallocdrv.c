@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// File Name: mymalloc.h
+///
+/// @par Full Description
+/// COE 449 Project 3
+/// Tests a custom implementation of malloc
+///
+/// @version
+/// 27-Mar-2018 Tyler Mohnke    Initial implementation
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// System Includes
+#include <stdint.h>
+#include <stddef.h>
+#include <stdio.h>
+
+// Local Includes
+#include "mymalloc.h"
+
+// Constant Values
+#define RECURSIVE_DEPTH 10000
+
+// Forward References
+void *sbrk(intptr_t increment);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Function Name: allocate
+///
+/// @par Full Description
+/// Allocates three things, frees the middle thing, then recursively calls itself some amount of times
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void myallocate(void)
+{
+    static uint32_t s_CallCount = 0U;
+    if(s_CallCount < RECURSIVE_DEPTH)
+    {
+        s_CallCount++;
+    }
+    else
+    {
+        return;
+    }
+    printf("-----Call Depth: %d\n\n", s_CallCount);
+    
+    uint32_t* pFirst = my_worstfit_malloc(sizeof(uint32_t));
+    uint32_t* pMiddle = my_worstfit_malloc(sizeof(uint32_t));
+    uint32_t* pEnd = my_worstfit_malloc(sizeof(uint32_t));
+    
+    *pFirst = 0xAABBCCDDUL;
+    *pEnd = 0xFACEBEEFUL;
+    
+    my_free(pMiddle);
+    myallocate();
+    
+    if((*pFirst != 0xAABBCCDDUL) || (*pEnd != 0xFACEBEEFUL))
+    {
+        printf("Memory Corruption\n");
+    }
+    
+    my_free(pFirst);
+    my_free(pEnd);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Function Name: main
+///
+/// @par Full Description
+/// Entry point of the program
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int main(void)
+{
+    void* pVoid = sbrk(0);
+    printf("%x\n\n", (uint32_t)pVoid);
+    myallocate();
+    pVoid = sbrk(0);
+    printf("%x", (uint32_t)pVoid);
+    
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// EOF
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

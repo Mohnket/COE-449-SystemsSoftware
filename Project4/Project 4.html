@@ -1,0 +1,633 @@
+
+<!-- saved from url=(0081)https://people.cs.pitt.edu/~jmisurda/teaching/cs449/2184/cs0449-2184-project4.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="Generator" content="Microsoft Word 15 (filtered)">
+<title>Project 4</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;}
+h1.CxSpFirst
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;}
+h1.CxSpMiddle
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;}
+h1.CxSpLast
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:13.0pt;
+	font-family:"Cambria",serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:112%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	font-style:italic;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	color:#7F7F7F;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:112%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	color:#7F7F7F;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Heading 7 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Heading 8 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Heading 9 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:30.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Cambria",serif;
+	letter-spacing:.65pt;
+	font-style:italic;}
+em
+	{letter-spacing:.5pt;
+	border:none;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-link:"Quote Char";
+	margin-top:10.0pt;
+	margin-right:.25in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	font-style:italic;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-link:"Intense Quote Char";
+	margin-top:10.0pt;
+	margin-right:.8in;
+	margin-bottom:14.0pt;
+	margin-left:.7in;
+	text-align:justify;
+	line-height:115%;
+	border:none;
+	padding:0in;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+span.MsoSubtleEmphasis
+	{font-style:italic;}
+span.MsoIntenseEmphasis
+	{font-weight:bold;}
+span.MsoSubtleReference
+	{font-variant:small-caps;}
+span.MsoIntenseReference
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	text-decoration:underline;}
+span.MsoBookTitle
+	{font-variant:small-caps;
+	letter-spacing:.25pt;
+	font-style:italic;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+p.MsoTocHeadingCxSpFirst, li.MsoTocHeadingCxSpFirst, div.MsoTocHeadingCxSpFirst
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+p.MsoTocHeadingCxSpMiddle, li.MsoTocHeadingCxSpMiddle, div.MsoTocHeadingCxSpMiddle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+p.MsoTocHeadingCxSpLast, li.MsoTocHeadingCxSpLast, div.MsoTocHeadingCxSpLast
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Cambria",serif;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Cambria",serif;
+	color:#7F7F7F;
+	font-weight:bold;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Cambria",serif;
+	color:#7F7F7F;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-link:"Heading 7";
+	font-family:"Cambria",serif;
+	font-style:italic;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-link:"Heading 8";
+	font-family:"Cambria",serif;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-link:"Heading 9";
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;
+	font-style:italic;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Cambria",serif;
+	letter-spacing:.25pt;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Cambria",serif;
+	letter-spacing:.65pt;
+	font-style:italic;}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-link:Quote;
+	font-style:italic;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-link:"Intense Quote";
+	font-weight:bold;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang="EN-US">
+
+<div class="WordSection1">
+
+<div style="border:none;border-bottom:solid windowtext 1.0pt;padding:0in 0in 1.0pt 0in">
+
+<p class="MsoTitleCxSpFirst"><span lang="X-NONE">CS 0449 –</span> A Shell</p>
+
+<p class="MsoTitleCxSpLast"><span lang="X-NONE" style="font-size:18.0pt">Due Date: </span><span style="font-size:18.0pt">Tuesday, April 10, 2018</span><span lang="X-NONE" style="font-size:18.0pt">, 11:59 PM</span></p>
+
+</div>
+
+<h1><span lang="X-NONE">The Basics </span></h1>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal">In this
+assignment you are to implement a Unix shell program. A shell is simply a
+program that conveniently allows you to run other programs. Read up on your
+favorite shell (such as “bash”) to see what it does. </p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal">The
+requirements for completing this assignment successfully are described below. </p>
+
+<h1 style="margin-top:12.0pt"><span lang="X-NONE">The </span>Input </h1>
+
+<p class="MsoNormal">A shell, at its simplest, is a program that reads input from
+the user and tries to execute the commands. The commands for our shell will be
+of one of two categories: </p>
+
+<p class="MsoNormal" style="margin-left:.5in">1.) Internal commands the shell
+knows how to do itself, and </p>
+
+<p class="MsoNormal" style="margin-left:.5in">2.) Other programs on the system to
+execute. </p>
+
+<p class="MsoNormal">Your shell should read in a line of input using the <span style="font-family:Consolas">fgets()</span> command. You then need to tokenize
+it and interpret it according to the features we are supporting described in
+the section below.</p>
+
+<p class="MsoNormal">To tokenize the input, use the C standard library function <span style="font-family:Consolas">strtok()</span>. This function behaves oddly, so
+make sure you read about the right way to invoke it. Our delimiter set will be
+all whitespace characters (space, tab, newline) and the characters:</p>
+
+<p class="MsoNormal" align="center" style="text-align:center;line-height:normal"><span style="font-family:Consolas">( ) &lt; &gt; | &amp; ;</span></p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal">We won’t be
+using them all in this assignment, but they are all useful in the real
+UNIX/Linux shell.</p>
+
+<h1 style="margin-top:12.0pt"><span lang="X-NONE">The Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h1>
+
+<p class="MsoNormal" style="line-height:normal">Your shell must support the
+following: </p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;line-height:normal">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+internal shell command "<span style="font-family:Consolas">exit</span>"
+which terminates the shell.</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="line-height:normal"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example:</span></strong> <span style="font-family:Consolas">exit</span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="line-height:normal"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts: </span></strong>shell
+commands, exiting the shell</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="line-height:normal"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System calls: </span></strong><span style="font-family:Consolas">exit()</span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="line-height:normal">&nbsp;</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;line-height:normal">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+internal shell command "<span style="font-family:Consolas">cd</span>"
+which changes the present working directory<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example:</span></strong>
+<span style="font-family:Consolas">cd private</span><br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Details:</span></strong>
+This command takes a relative or absolute path and changes the present working
+directory to that path<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts:</span></strong>
+present working directory, absolute and relative paths<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System calls:</span></strong>
+<span style="font-family:Consolas">chdir()</span> </p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:0in;line-height:normal">&nbsp;</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;line-height:normal">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Any
+UNIX command, with or without arguments<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example commands:</span></strong><span style="font-family:Consolas"> ls, pico, pwd,</span><strong><span style="font-family:&quot;Calibri&quot;,sans-serif"> </span></strong><span style="font-family:Consolas">ls –l, wc –l, ps -a</span><br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Details:</span></strong>
+Your shell must block until the command completes and, if the return code is
+abnormal, print out a message to that effect. Argument 0 is the name of the
+command<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts:</span></strong>
+Forking a child process, waiting for it to complete, synchronous execution,
+Command-line parameters</p>
+
+<p class="MsoListParagraphCxSpMiddle"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System
+calls:</span></strong> <span style="font-family:Consolas">fork(), execvp(),
+exit(), wait()</span></p>
+
+<p class="MsoListParagraphCxSpMiddle">&nbsp;</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;line-height:normal">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+internal shell command “<span style="font-family:Consolas">time</span>” that
+reports the user and system time of the program that is specified.<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example:</span></strong>&nbsp;
+<span style="font-family:Consolas">time ls -l</span><br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Details:</span></strong>
+If the first token is “time”, execute the program that follows, waiting for it
+to complete. When it finishes, report the user and system time spent executing
+the program.<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts:</span></strong>
+user and system time<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System calls:</span></strong>
+<span style="font-family:Consolas">times() </span>(use the command<span style="font-family:Consolas"> “man -s 2 times” </span>to learn more)</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="line-height:normal">&nbsp;</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;line-height:normal">5.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Any
+UNIX command, with or without arguments, whose output is redirected to a file<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example:</span></strong>
+<span style="font-family:Consolas">ls -l &gt; foo</span><br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Details:</span></strong>
+This takes the output of the command and put it in the named file<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts:</span></strong>
+File operations, output redirection<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System calls:</span></strong>
+<span style="font-family:Consolas">freopen()</span> <br>
+<br>
+</p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;line-height:normal">6.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Any
+UNIX command, with or without arguments, whose output is appended to a file<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Example:</span></strong>
+<span style="font-family:Consolas">ls -l &gt;&gt; foo</span><br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Details:</span></strong>
+This takes the output of the command and appends it to the named file<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">Concepts:</span></strong>
+File operations, output redirection<br>
+<strong><span style="font-family:&quot;Calibri&quot;,sans-serif">System calls:</span></strong>
+<span style="font-family:Consolas">freopen()</span> </p>
+
+<p class="MsoListParagraphCxSpLast">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal"><em><span style="border:none"><span style="border:none">Note:</span></span></em> You must
+check and correctly handle all return values. This means that you need to read
+the <span style="font-family:Consolas">man</span> pages for each function to
+figure out what the possible return values are, what errors they indicate, and
+what you must do when you get that error. </p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal">Please note
+that the UNIX commands in the list above are <i>examples</i>. Do not hard code
+support for them in. If it is not a built-in shell command, you should be
+attempting to run whatever program the user has typed as the first word on the
+commandline.</p>
+
+<h1><span lang="X-NONE">Requirements</span> and Hints</h1>
+
+<ul style="margin-top:0in" type="disc">
+ <li class="MsoNormal">You must read in input using <span style="font-family:
+     Consolas">fgets()</span></li>
+ <li class="MsoNormal">You must tokenize the input using <span style="font-family:
+     Consolas">strtok()</span></li>
+ <li class="MsoNormal">You do not need any special environment to run or execute
+     this program (beyond using thoth as always). A shell can run another shell
+     inside of it.</li>
+</ul>
+
+<h1><span lang="X-NONE">Submission</span></h1>
+
+<p class="MsoNormal">You need to submit:</p>
+
+<ul style="margin-top:0in" type="disc">
+ <li class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+     150%">Your <span style="font-size:10.0pt;line-height:150%;font-family:
+     Consolas">myshell.c</span><span style="font-size:10.0pt;line-height:150%">
+     </span>file </li>
+</ul>
+
+<p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+150%">&nbsp;</p>
+
+<p class="MsoNormal">Make a tar.gz file named <span style="font-size:10.0pt;
+line-height:115%;font-family:Consolas">USERNAME-project4.tar.gz</span></p>
+
+<p class="MsoNormal">Copy your archive to the submit directory:</p>
+
+<p class="MsoNormal" style="margin-left:1.0in"><span style="font-family:Consolas">~jrmst106/submit/449/</span></p>
+
+<p class="MsoNormal" style="text-align:justify;line-height:normal">&nbsp;</p>
+
+</div>
+
+
+
+
+</body></html>
